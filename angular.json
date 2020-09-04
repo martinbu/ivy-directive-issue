@@ -1,21 +1,27 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "packageManager": "npm"
+  },
   "newProjectRoot": "projects",
   "projects": {
-    "v8-test": {
+    "v10_1-test": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:class": {
+        "@schematics/angular:component": {
           "skipTests": true
         },
-        "@schematics/angular:component": {
+        "@schematics/angular:class": {
           "skipTests": true
         },
         "@schematics/angular:directive": {
           "skipTests": true
         },
         "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
           "skipTests": true
         },
         "@schematics/angular:module": {
@@ -35,7 +41,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/v8-test",
+            "outputPath": "dist/v10_1-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -84,34 +90,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "v8-test:build"
+            "browserTarget": "v10_1-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "v8-test:build:production"
+              "browserTarget": "v10_1-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "v8-test:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "browserTarget": "v10_1-test:build"
           }
         }
       }
     }},
-  "defaultProject": "v8-test"
+  "defaultProject": "v10_1-test"
 }

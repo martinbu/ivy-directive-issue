@@ -7,8 +7,8 @@ import { ContainerComponent } from './container.component';
 import { ContainerWrapperDirective } from './container-wrapper.directive';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, ContainerComponent, ContainerWrapperDirective ],
+  imports:      [ BrowserModule, FormsModule ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -17,8 +17,8 @@ export class ContainerComponent implements OnInit {
     'yellow', 'green', 'lightblue', 'red'
   ];
 
-  @Input() element: ElementDef;
-  @Input() parentName: string;
+  @Input() element?: ElementDef;
+  @Input() parentName?: string;
 
   constructor(@Optional() @Host() private directive: ContainerWrapperDirective) {}
 

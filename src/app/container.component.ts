@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Optional, Host } from '@angular/core';
+import { Component, Input, OnInit, Optional, Host, SkipSelf } from '@angular/core';
 import {ElementDef} from './model';
 import { ContainerWrapperDirective } from './container-wrapper.directive';
 @Component({
@@ -20,7 +20,7 @@ export class ContainerComponent implements OnInit {
   @Input() element?: ElementDef;
   @Input() parentName?: string;
 
-  constructor(@Optional() @Host() private directive: ContainerWrapperDirective) {}
+  constructor(@Optional() @SkipSelf() @Host() private directive: ContainerWrapperDirective) {}
 
   ngOnInit(): void {
     if (this.directive !== null) {
